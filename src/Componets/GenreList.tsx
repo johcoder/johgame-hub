@@ -1,11 +1,12 @@
 import React from "react";
 import apiClient from "../services/api-client";
 import useGenres from "../Hooks/useGenres";
-import { Card, HStack, Image, List, ListItem, Text } from "@chakra-ui/react";
+import { Card, HStack, Image, List, ListItem, Spinner, Text } from "@chakra-ui/react";
 import croppedUrlImage from "../services/image-url";
 
 const GenreList = () => {
-  const { genres } = useGenres();
+  const { genres,isLoading } = useGenres();
+  if(isLoading) return <Spinner />
   return (
     <List>
       {genres.map((genre) => (
