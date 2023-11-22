@@ -1,3 +1,4 @@
+'use client';
 import { Button, ButtonGroup, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import NavBar from "./Componets/NavBar";
 import GameGrid from "./Componets/GameGrid";
